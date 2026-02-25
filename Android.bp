@@ -1,0 +1,15 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+android_app_import {
+    name: "CarAppHost",
+    apk: "CarAppHost.apk",
+    owner: "google",
+    certificate: "platform",
+    privileged: true,
+    required: ["allowed_privapp_com.android.car.templates.host"],
+    dex_preopt: {
+        enabled: false,
+    },
+}
